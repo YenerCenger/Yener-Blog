@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h3>Hesap</h3>
+    <hr>
+
+    <h5>Bilgiler</h5>
+    <hr>
+    <ul>
+        <li> Ad Soyad : {{name}}</li>
+        <hr>
+
+        <li>Kullanıcı adı : {{session.username}}</li>
+        <hr>
+
+        <li>Email : {{email}}</li>
+        <hr>
+    </ul>
+    
+
+    <a href="/updateinfo/{{id}}" class = "btn btn-info">Bilgileri Güncelle</a>
+    <a href="/uploadfile" class = "btn btn-warning">Fotoğraf Yükle</a>
+
+    <a href="/deleteaccount/{{id}}" class = "btn btn-danger float-right">Hesabı Sil</a>
+
+{% endblock body %}
